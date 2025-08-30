@@ -19,7 +19,7 @@ export interface Recipe {
   title: string;
   description: string;
   image: string;
-  author: string;
+  author: string | { _id: string; name: string };
   authorId: string;
   cookTime: string;
   prepTime: string;

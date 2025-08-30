@@ -102,7 +102,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
               ({recipe.reviewCount})
             </span>
           </div>
-          <p className="text-sm text-muted-foreground">by {recipe.author}</p>
+          <p className="text-sm text-muted-foreground">by {typeof recipe.author === 'string' ? recipe.author : recipe.author?.name || 'Unknown'}</p>
         </div>
 
         <div className="flex flex-wrap gap-1 mt-3">
